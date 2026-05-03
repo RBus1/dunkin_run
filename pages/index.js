@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 
 // ─── SWAP THIS URL WHEN THE PARTIFUL LINK IS READY ───────────────────────────
-const PARTIFUL_URL = "https://partiful.com/[PARTIFUL_LINK_HERE]";
+const PARTIFUL_URL = "https://partiful.com/e/Mw4JXPRNoURjfpwa5t92?c=KO5icZVn";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const STOPS = [
