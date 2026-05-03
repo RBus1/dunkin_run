@@ -68,7 +68,7 @@ export default function Home() {
         <hr className={styles.divider} />
 
         <p className={styles.description}>
-          They say that America runs on Dunkin &mdash; and we&rsquo;ve decided to test that
+          They say that America runs on Dunkin and we&rsquo;ve decided to test that
           proposition. This run will stop at every single Dunkin&rsquo; location within
           Cambridge city limits.
         </p>
