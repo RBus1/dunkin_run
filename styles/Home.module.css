@@ -1,141 +1,218 @@
 .page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
 }
 
-.main {
+.header {
+  padding: 56px 0 40px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: #FF6E00;
+  color: #1C1C1C;
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: clamp(36px, 8vw, 80px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #FF6E00;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: clamp(20px, 4.5vw, 40px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #E8145A;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.divider {
+  border: none;
+  border-top: 3px solid #FF6E00;
+  margin: 40px 0;
+}
+
+.description {
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.7;
+  color: #FFFFFF;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section {
+  margin-top: 56px;
+}
+
+.sectionHeading {
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #FF6E00;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+}
+
+.rulesList {
+  list-style: none;
   display: flex;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 800px;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  gap: 12px;
 }
 
-.intro {
+.rulesItem {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  text-align: left;
-  gap: 24px;
-}
-
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
-}
-
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
   gap: 16px;
-  font-size: 14px;
+  font-size: clamp(15px, 2.2vw, 18px);
+  line-height: 1.5;
 }
 
-.ctas a {
+.ruleNum {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: #E8145A;
+  color: #FFFFFF;
+  font-family: Impact, Arial Black, sans-serif;
+  font-weight: 900;
+  font-size: 15px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.rsvpWrap {
+  margin-top: 56px;
+  text-align: center;
+}
+
+.rsvpBtn {
+  display: inline-block;
+  background: #E8145A;
+  color: #FFFFFF;
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: clamp(20px, 3.5vw, 30px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 18px 52px;
+  border-radius: 999px;
+  border: none;
   cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+  transition: background 0.15s, transform 0.1s;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.rsvpBtn:hover {
+  background: #c40f4d;
+  transform: scale(1.03);
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.rsvpBtn:active {
+  transform: scale(0.98);
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.mapWrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border: 3px solid #FF6E00;
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+.mapWrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.stopsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
 
+.stopCard {
+  background: #242424;
+  border-left: 4px solid #FF6E00;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.stopCardFinish {
+  background: #242424;
+  border-left: 4px solid #E8145A;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.stopLabel {
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #FF6E00;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.stopLabelFinish {
+  font-family: Impact, Arial Black, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #E8145A;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.footer {
+  margin-top: 72px;
+  padding-top: 24px;
+  border-top: 1px solid #333;
+  text-align: center;
+  color: #888888;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 480px) {
   .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+    padding: 0 16px 48px;
+  }
+  .header {
+    padding: 40px 0 28px;
+  }
+  .rsvpBtn {
+    width: 100%;
+    padding: 18px 24px;
   }
 }
