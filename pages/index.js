@@ -29,7 +29,8 @@ function buildMapsUrl(stops) {
     .slice(1, -1)
     .map((s) => encodeURIComponent(s))
     .join("|");
-  return `https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&origin=${origin}&destination=${destination}&waypoints=${waypoints}&mode=walking`;
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  return `https://www.google.com/maps/embed/v1/directions?key=${apiKey}&origin=${origin}&destination=${destination}&waypoints=${waypoints}&mode=walking`;
 }
 
 const MAPS_URL = buildMapsUrl(STOPS);
